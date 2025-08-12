@@ -2,51 +2,30 @@
 using namespace std;
 
 int main(){
-    int m,n,p;
- 
-    cout<<"Enter numbers of rows and columns in first array : ";
-    cin>>m>>n;
-    int arr1[m][n];
+    int m,n,arr[100][100],transpose[100][100];;
     
-    cout<<"Enter elements in first array : ";
+    cout<<"Enter number of rows and columns in the array : ";
+    cin>>m>>n;
+
+    cout<<"Enter elements in the array :";
     for(int i=0; i<m; i++){
         for(int j=0; j<n; j++){
-            cin>>arr1[i][j];
+            cin>>arr[i][j];
         }
     }
 
-    cout<<"Enter number of columns in second array : ";
-    cin>>p;
-    int arr2[n][p];
-    int arr[m][p];
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
+            transpose[j][i]=arr[i][j];
+        }
+    }
 
-    cout<<"Enter elements in second array : ";
+    cout<<"Transpose of the given array is : "<<endl;
     for(int i=0; i<n; i++){
-        for(int j=0; j<p; j++){
-            cin>>arr2[i][j];
-        }
-    }
-
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < p; j++){
-            arr[i][j] = 0;
-        }
-    }
-
-    for (int i = 0 ; i < m ; i++){
-        for(int j = 0 ; j < p ; j++){
-            for(int k = 0 ; k < n ; k++)
-            arr[i][j] += arr1[i][k]*arr2[k][j];
-        }
-    }
-    
-    cout<<"Mutplication of both the matrices is : "<<endl;
-    for(int i = 0; i < m; i++){
-        for(int j = 0; j < p; j++){
-            cout<<arr[i][j]<<" ";
+        for(int j=0; j<m; j++){
+            cout<<transpose[i][j]<<" ";
         }
         cout<<endl;
     }
-
     return 0;
 }
