@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int reverse(int arr[],int n){
+void reverse(int arr[],int n){
     int buffer;
     for(int i=0; i<n/2; i++){
         buffer = arr[i];
@@ -9,6 +9,7 @@ int reverse(int arr[],int n){
         arr[n-1-i] = buffer;
     }
 
+    cout<<"Reversed array is : ";
     for(int i=0; i<n; i++){
         cout<<arr[i]<<" ";
     }
