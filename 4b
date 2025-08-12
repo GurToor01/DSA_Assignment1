@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
     int m,n,p;
-    int arr1[100][100]={0},arr2[100][100]={0},arr[100][100];
+    int arr1[100][100]={0},arr2[100][100]={0},arr[100][100]={0};
     cout<<"Enter numbers of rows and columns in first array : ";
     cin>>m>>n;
     
